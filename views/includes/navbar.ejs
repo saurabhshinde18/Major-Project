@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top custom-navbar">
   <div class="container-fluid">
       <a class="navbar-brand" href="/"><i class="fa-regular fa-compass"></i></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,8 +23,21 @@
 </nav>
 
 <style>
-/* Media Queries for Mobile */
+/* Default navbar background */
+.custom-navbar {
+  background-color: #f8f9fa; /* Change this to your desired background color */
+}
+
+/* Change navbar background color when the hamburger menu is clicked */
 @media (max-width: 767.98px) {
+  .navbar-collapse:not(.show) {
+      background-color: #f8f9fa; /* Default background when collapsed */
+  }
+
+  .navbar-collapse.show {
+      background-color: #ffffff; /* Change this to the desired color when expanded */
+  }
+
   .navbar-nav .nav-link {
       text-align: center;
       padding: 10px;
